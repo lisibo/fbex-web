@@ -1,0 +1,167 @@
+  /*解决渲染的时候闪烁*/
+
+  [v-cloak] {
+    display: none;
+  } //mixin libs
+  .placeholder(@color) {
+     ::-webkit-input-placeholder {
+      color: @color;
+    }
+     :-moz-placeholder {
+      color: @color;
+    }
+     ::-moz-placeholder {
+      color: @color;
+    }
+  } //end
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: sans-serif;
+    background: #3B4249;
+  }
+
+  body,
+  a {
+    color: #8D9398;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: normal;
+  }
+
+
+  @blue: #42a2fc;
+  @c: #0D141C;
+  @red: #FF6442;
+  @green: #5DC176;
+
+  .red {
+    color: @red;
+  }
+
+  .green {
+    color: @green;
+  }
+
+  .container {
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+  } //dark style
+  .button {
+    background: @blue;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: .4s;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    &:hover {
+      background: darken(@blue, 10%);
+    }
+    &-max {
+      font-size: 16px;
+      padding: 20px 50px;
+    }
+    &-min {
+      font-size: 13px;
+      padding:6px 14px;
+    }
+    .ico{
+      margin-right:5px;
+    }
+    &-grey{
+      background: #51565C;
+      color:#fff;
+      &:hover{
+        background:darken( #51565C,5%);
+        color:#fff;
+      }
+    }
+  }
+
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  input[type='number'] {
+    background: #3B4249;
+    border: 1px solid #3B4249;
+    border-radius: 2px;
+    padding: 12px 8px;
+    color: #fff;
+    transition: .4s;
+    outline: none;
+    font-size: 13px;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-appearance:none;
+    margin:0;
+
+    &:focus {
+      border: 1px solid lighten(@c, 66%);
+    }
+  }
+  input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance:none;margin:0;
+  }
+  .panel {
+    background: #23272e;
+    &-head {
+      background: #1E252D;
+    }
+  }
+
+  .member{
+    &-content{
+      padding:30px;
+    }
+    &-title {
+    padding:0 0;
+    border-bottom:1px solid rgba(255,255,255,.1);
+    h1 {
+      background: #292f37;
+      font-size:24px;
+      display: block;
+      color: #ffffff;
+      font-weight:800;
+    }
+  }
+  &-assets{
+    margin:20px 0;
+    opacity:.5;
+  }
+  &-total{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  &-table{
+
+  }
+}
+.flex{
+  &-c-b{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+}

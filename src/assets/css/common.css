@@ -1,0 +1,10 @@
+.btn-b{
+    background: #2286FF;
+    border-radius: 2px;
+    height: 42px;
+    font-size: 16px;
+    color:#fff;
+    padding: 0 34px;
+    line-height: 42px;
+    cursor: pointer;
+}
